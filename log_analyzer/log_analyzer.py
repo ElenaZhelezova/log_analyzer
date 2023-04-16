@@ -271,7 +271,7 @@ if __name__ == '__main__':
 
     try:
         config = get_config(args.config)
-    except ValueError, IOError:
+    except ValueError as IOError:
         raise SystemExit('config file does not exist')
 
     create_logging(config.get('LOGGING_DIR'))
